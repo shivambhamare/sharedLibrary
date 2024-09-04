@@ -1,5 +1,5 @@
 def call()
 {
   sh "date"
-  sh "ifconfig enp0s3"
+  sh "echo Hi from the devops team"
 }
