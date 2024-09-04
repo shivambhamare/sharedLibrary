@@ -1,8 +1,9 @@
-def call() 
-{
+// vars/checkoutCode.groovy
+
+def call(String repoUrl = 'https://github.com/shivambhamare/CICD', String branchName = '*/main') {
     checkout([
         $class: 'GitSCM',
-        branches: [[name: '*/main']],
-        userRemoteConfigs: [[url: 'https://github.com/shivambhamare/CICD']]
+        branches: [[name: branchName]],
+        userRemoteConfigs: [[url: repoUrl]]
     ])
 }
