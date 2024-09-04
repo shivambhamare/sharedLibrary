@@ -1,4 +1,5 @@
-def call() {
+def call() 
+{
     checkout([
         $class: 'GitSCM',
         branches: [[name: '*/main']],
